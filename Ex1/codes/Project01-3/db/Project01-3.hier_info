@@ -1,0 +1,500 @@
+|Project01-3
+output <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+A3[0] => 4Bit-mod3:inst.A[0]
+A3[1] => 4Bit-mod3:inst.A[1]
+A3[2] => 4Bit-mod3:inst.A[2]
+A3[3] => 4Bit-mod3:inst.A[3]
+A2[0] => 4Bit-mod3:inst4.A[0]
+A2[1] => 4Bit-mod3:inst4.A[1]
+A2[2] => 4Bit-mod3:inst4.A[2]
+A2[3] => 4Bit-mod3:inst4.A[3]
+A1[0] => 4Bit-mod3:inst5.A[0]
+A1[1] => 4Bit-mod3:inst5.A[1]
+A1[2] => 4Bit-mod3:inst5.A[2]
+A1[3] => 4Bit-mod3:inst5.A[3]
+A0[0] => 4Bit-mod3:inst6.A[0]
+A0[1] => 4Bit-mod3:inst6.A[1]
+A0[2] => 4Bit-mod3:inst6.A[2]
+A0[3] => 4Bit-mod3:inst6.A[3]
+
+
+|Project01-3|4Bit-mod3:inst3
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= <GND>
+out[3] <= <GND>
+A[0] => inst15.IN2
+A[0] => inst17.IN0
+A[0] => inst13.IN3
+A[0] => inst11.IN2
+A[1] => inst18.IN0
+A[1] => inst16.IN2
+A[1] => inst10.IN1
+A[1] => inst11.IN1
+A[2] => inst15.IN0
+A[2] => inst21.IN0
+A[2] => inst12.IN0
+A[2] => inst19.IN0
+A[2] => inst11.IN0
+A[3] => inst22.IN0
+A[3] => inst14.IN0
+A[3] => inst10.IN0
+A[3] => inst20.IN0
+
+
+|Project01-3|4Bit-FA:inst1
+C_out <= FA:inst2.C_out
+A[0] => FA:inst.A
+A[1] => FA:inst4.A
+A[2] => FA:inst1.A
+A[3] => FA:inst2.A
+B[0] => FA:inst.B
+B[1] => FA:inst4.B
+B[2] => FA:inst1.B
+B[3] => FA:inst2.B
+Sum[0] <= FA:inst.Sum
+Sum[1] <= FA:inst4.Sum
+Sum[2] <= FA:inst1.Sum
+Sum[3] <= FA:inst2.Sum
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst2
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst2|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst2|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst1
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst1|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst1|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst4
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst4|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst4|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst1|FA:inst|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst7
+C_out <= FA:inst2.C_out
+A[0] => FA:inst.A
+A[1] => FA:inst4.A
+A[2] => FA:inst1.A
+A[3] => FA:inst2.A
+B[0] => FA:inst.B
+B[1] => FA:inst4.B
+B[2] => FA:inst1.B
+B[3] => FA:inst2.B
+Sum[0] <= FA:inst.Sum
+Sum[1] <= FA:inst4.Sum
+Sum[2] <= FA:inst1.Sum
+Sum[3] <= FA:inst2.Sum
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst2
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst2|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst2|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst1
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst1|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst1|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst4
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst4|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst4|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst7|FA:inst|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-mod3:inst
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= <GND>
+out[3] <= <GND>
+A[0] => inst15.IN2
+A[0] => inst17.IN0
+A[0] => inst13.IN3
+A[0] => inst11.IN2
+A[1] => inst18.IN0
+A[1] => inst16.IN2
+A[1] => inst10.IN1
+A[1] => inst11.IN1
+A[2] => inst15.IN0
+A[2] => inst21.IN0
+A[2] => inst12.IN0
+A[2] => inst19.IN0
+A[2] => inst11.IN0
+A[3] => inst22.IN0
+A[3] => inst14.IN0
+A[3] => inst10.IN0
+A[3] => inst20.IN0
+
+
+|Project01-3|4Bit-mod3:inst4
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= <GND>
+out[3] <= <GND>
+A[0] => inst15.IN2
+A[0] => inst17.IN0
+A[0] => inst13.IN3
+A[0] => inst11.IN2
+A[1] => inst18.IN0
+A[1] => inst16.IN2
+A[1] => inst10.IN1
+A[1] => inst11.IN1
+A[2] => inst15.IN0
+A[2] => inst21.IN0
+A[2] => inst12.IN0
+A[2] => inst19.IN0
+A[2] => inst11.IN0
+A[3] => inst22.IN0
+A[3] => inst14.IN0
+A[3] => inst10.IN0
+A[3] => inst20.IN0
+
+
+|Project01-3|4Bit-FA:inst8
+C_out <= FA:inst2.C_out
+A[0] => FA:inst.A
+A[1] => FA:inst4.A
+A[2] => FA:inst1.A
+A[3] => FA:inst2.A
+B[0] => FA:inst.B
+B[1] => FA:inst4.B
+B[2] => FA:inst1.B
+B[3] => FA:inst2.B
+Sum[0] <= FA:inst.Sum
+Sum[1] <= FA:inst4.Sum
+Sum[2] <= FA:inst1.Sum
+Sum[3] <= FA:inst2.Sum
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst2
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst2|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst2|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst1
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst1|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst1|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst4
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst4|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst4|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst
+C_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A => HA:inst.A
+B => HA:inst.B
+C_in => HA:inst1.B
+Sum <= HA:inst1.S
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst|HA:inst1
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-FA:inst8|FA:inst|HA:inst
+C <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Project01-3|4Bit-mod3:inst5
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= <GND>
+out[3] <= <GND>
+A[0] => inst15.IN2
+A[0] => inst17.IN0
+A[0] => inst13.IN3
+A[0] => inst11.IN2
+A[1] => inst18.IN0
+A[1] => inst16.IN2
+A[1] => inst10.IN1
+A[1] => inst11.IN1
+A[2] => inst15.IN0
+A[2] => inst21.IN0
+A[2] => inst12.IN0
+A[2] => inst19.IN0
+A[2] => inst11.IN0
+A[3] => inst22.IN0
+A[3] => inst14.IN0
+A[3] => inst10.IN0
+A[3] => inst20.IN0
+
+
+|Project01-3|4Bit-mod3:inst6
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= <GND>
+out[3] <= <GND>
+A[0] => inst15.IN2
+A[0] => inst17.IN0
+A[0] => inst13.IN3
+A[0] => inst11.IN2
+A[1] => inst18.IN0
+A[1] => inst16.IN2
+A[1] => inst10.IN1
+A[1] => inst11.IN1
+A[2] => inst15.IN0
+A[2] => inst21.IN0
+A[2] => inst12.IN0
+A[2] => inst19.IN0
+A[2] => inst11.IN0
+A[3] => inst22.IN0
+A[3] => inst14.IN0
+A[3] => inst10.IN0
+A[3] => inst20.IN0
+
+

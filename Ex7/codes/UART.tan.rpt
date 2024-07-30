@@ -1,0 +1,446 @@
+Classic Timing Analyzer report for UART
+Wed May 01 11:05:56 2024
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'CLK'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                              ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+-------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                      ; To                      ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+-------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.246 ns                         ; dataToSend[0]             ; sender:SENDER|data[0]   ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.133 ns                         ; receiver:RECEIVER|data[5] ; parityCheck             ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.467 ns                         ; dataToSend[2]             ; sender:SENDER|data[2]   ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 347.83 MHz ( period = 2.875 ns ) ; sender:SENDER|data[4]     ; sender:SENDER|signalOut ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                           ;                         ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+-------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                       ;
++-------+------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                             ; To                               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 347.83 MHz ( period = 2.875 ns )               ; sender:SENDER|data[4]            ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.661 ns                ;
+; N/A   ; 356.13 MHz ( period = 2.808 ns )               ; sender:SENDER|dataIndex[0]       ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.599 ns                ;
+; N/A   ; 362.06 MHz ( period = 2.762 ns )               ; sender:SENDER|signalOut          ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.548 ns                ;
+; N/A   ; 362.58 MHz ( period = 2.758 ns )               ; sender:SENDER|dataIndex[1]       ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.549 ns                ;
+; N/A   ; 362.98 MHz ( period = 2.755 ns )               ; sender:SENDER|data[2]            ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.541 ns                ;
+; N/A   ; 366.97 MHz ( period = 2.725 ns )               ; sender:SENDER|data[1]            ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.511 ns                ;
+; N/A   ; 388.20 MHz ( period = 2.576 ns )               ; sender:SENDER|data[0]            ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.362 ns                ;
+; N/A   ; 390.63 MHz ( period = 2.560 ns )               ; sender:SENDER|data[6]            ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.346 ns                ;
+; N/A   ; 391.24 MHz ( period = 2.556 ns )               ; sender:SENDER|prevStart          ; sender:SENDER|dataIndex[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.337 ns                ;
+; N/A   ; 391.24 MHz ( period = 2.556 ns )               ; sender:SENDER|prevStart          ; sender:SENDER|dataIndex[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.337 ns                ;
+; N/A   ; 391.24 MHz ( period = 2.556 ns )               ; sender:SENDER|prevStart          ; sender:SENDER|dataIndex[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.337 ns                ;
+; N/A   ; 405.35 MHz ( period = 2.467 ns )               ; sender:SENDER|data[3]            ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.253 ns                ;
+; N/A   ; 406.01 MHz ( period = 2.463 ns )               ; sender:SENDER|dataIndex[0]       ; sender:SENDER|state.SEND         ; CLK        ; CLK      ; None                        ; None                      ; 2.254 ns                ;
+; N/A   ; 408.33 MHz ( period = 2.449 ns )               ; sender:SENDER|data[5]            ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 2.235 ns                ;
+; N/A   ; 414.25 MHz ( period = 2.414 ns )               ; sender:SENDER|dataIndex[2]       ; sender:SENDER|state.SEND         ; CLK        ; CLK      ; None                        ; None                      ; 2.205 ns                ;
+; N/A   ; 415.80 MHz ( period = 2.405 ns )               ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|state.IDLE     ; CLK        ; CLK      ; None                        ; None                      ; 2.191 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|state.RECEIVE  ; CLK        ; CLK      ; None                        ; None                      ; 2.162 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.STOP     ; receiver:RECEIVER|state.IDLE     ; CLK        ; CLK      ; None                        ; None                      ; 2.110 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|state.IDLE     ; CLK        ; CLK      ; None                        ; None                      ; 2.103 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.PARITY   ; receiver:RECEIVER|state.IDLE     ; CLK        ; CLK      ; None                        ; None                      ; 2.097 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.SEND         ; sender:SENDER|dataIndex[2]       ; CLK        ; CLK      ; None                        ; None                      ; 2.089 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.SEND         ; sender:SENDER|dataIndex[1]       ; CLK        ; CLK      ; None                        ; None                      ; 2.089 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.SEND         ; sender:SENDER|dataIndex[0]       ; CLK        ; CLK      ; None                        ; None                      ; 2.089 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|state.IDLE     ; CLK        ; CLK      ; None                        ; None                      ; 2.085 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.STOP     ; receiver:RECEIVER|state.RECEIVE  ; CLK        ; CLK      ; None                        ; None                      ; 2.081 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|state.RECEIVE  ; CLK        ; CLK      ; None                        ; None                      ; 2.074 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.PARITY   ; receiver:RECEIVER|state.RECEIVE  ; CLK        ; CLK      ; None                        ; None                      ; 2.068 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|state.RECEIVE  ; CLK        ; CLK      ; None                        ; None                      ; 2.056 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|data[2]        ; CLK        ; CLK      ; None                        ; None                      ; 2.050 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|state.IDLE     ; CLK        ; CLK      ; None                        ; None                      ; 1.992 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|state.IDLE     ; CLK        ; CLK      ; None                        ; None                      ; 1.980 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|dataIndex[2]       ; CLK        ; CLK      ; None                        ; None                      ; 1.963 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|dataIndex[1]       ; CLK        ; CLK      ; None                        ; None                      ; 1.963 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|dataIndex[0]       ; CLK        ; CLK      ; None                        ; None                      ; 1.963 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|state.RECEIVE  ; CLK        ; CLK      ; None                        ; None                      ; 1.963 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[1]       ; sender:SENDER|state.SEND         ; CLK        ; CLK      ; None                        ; None                      ; 1.956 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|state.RECEIVE  ; CLK        ; CLK      ; None                        ; None                      ; 1.951 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 1.949 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|dataIndex[0]   ; CLK        ; CLK      ; None                        ; None                      ; 1.934 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|data[2]        ; CLK        ; CLK      ; None                        ; None                      ; 1.927 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|dataIndex[1]   ; CLK        ; CLK      ; None                        ; None                      ; 1.922 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|dataIndex[2]   ; CLK        ; CLK      ; None                        ; None                      ; 1.922 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|sent               ; CLK        ; CLK      ; None                        ; None                      ; 1.889 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[2]       ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 1.887 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|state.START        ; CLK        ; CLK      ; None                        ; None                      ; 1.832 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|data[5]            ; CLK        ; CLK      ; None                        ; None                      ; 1.795 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|data[6]            ; CLK        ; CLK      ; None                        ; None                      ; 1.795 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|data[4]            ; CLK        ; CLK      ; None                        ; None                      ; 1.795 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|data[2]            ; CLK        ; CLK      ; None                        ; None                      ; 1.795 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|data[3]            ; CLK        ; CLK      ; None                        ; None                      ; 1.795 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|data[1]            ; CLK        ; CLK      ; None                        ; None                      ; 1.795 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|data[0]            ; CLK        ; CLK      ; None                        ; None                      ; 1.795 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|data[5]        ; CLK        ; CLK      ; None                        ; None                      ; 1.723 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|data[0]        ; CLK        ; CLK      ; None                        ; None                      ; 1.719 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|data[4]        ; CLK        ; CLK      ; None                        ; None                      ; 1.718 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|data[3]        ; CLK        ; CLK      ; None                        ; None                      ; 1.711 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.STOP     ; receiver:RECEIVER|dataIndex[0]   ; CLK        ; CLK      ; None                        ; None                      ; 1.685 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|data[2]        ; CLK        ; CLK      ; None                        ; None                      ; 1.681 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|data[1]        ; CLK        ; CLK      ; None                        ; None                      ; 1.676 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.STOP     ; receiver:RECEIVER|dataIndex[1]   ; CLK        ; CLK      ; None                        ; None                      ; 1.673 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.STOP     ; receiver:RECEIVER|dataIndex[2]   ; CLK        ; CLK      ; None                        ; None                      ; 1.673 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|dataIndex[0]   ; CLK        ; CLK      ; None                        ; None                      ; 1.672 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|received       ; CLK        ; CLK      ; None                        ; None                      ; 1.663 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|dataIndex[1]   ; CLK        ; CLK      ; None                        ; None                      ; 1.660 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|dataIndex[2]   ; CLK        ; CLK      ; None                        ; None                      ; 1.660 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|data[5]        ; CLK        ; CLK      ; None                        ; None                      ; 1.643 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|data[4]        ; CLK        ; CLK      ; None                        ; None                      ; 1.634 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|data[0]        ; CLK        ; CLK      ; None                        ; None                      ; 1.632 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|data[5]        ; CLK        ; CLK      ; None                        ; None                      ; 1.629 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|data[3]        ; CLK        ; CLK      ; None                        ; None                      ; 1.622 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|data[0]        ; CLK        ; CLK      ; None                        ; None                      ; 1.613 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|data[3]        ; CLK        ; CLK      ; None                        ; None                      ; 1.613 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|data[4]        ; CLK        ; CLK      ; None                        ; None                      ; 1.613 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|data[5]        ; CLK        ; CLK      ; None                        ; None                      ; 1.600 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|data[0]        ; CLK        ; CLK      ; None                        ; None                      ; 1.596 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|data[4]        ; CLK        ; CLK      ; None                        ; None                      ; 1.595 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|sent               ; CLK        ; CLK      ; None                        ; None                      ; 1.593 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|data[3]        ; CLK        ; CLK      ; None                        ; None                      ; 1.588 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|data[1]        ; CLK        ; CLK      ; None                        ; None                      ; 1.584 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|data[1]        ; CLK        ; CLK      ; None                        ; None                      ; 1.582 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|received       ; CLK        ; CLK      ; None                        ; None                      ; 1.565 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|data[1]        ; CLK        ; CLK      ; None                        ; None                      ; 1.553 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.PARITY   ; receiver:RECEIVER|dataIndex[0]   ; CLK        ; CLK      ; None                        ; None                      ; 1.538 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|state.START        ; CLK        ; CLK      ; None                        ; None                      ; 1.536 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.PARITY   ; receiver:RECEIVER|dataIndex[1]   ; CLK        ; CLK      ; None                        ; None                      ; 1.526 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.PARITY   ; receiver:RECEIVER|dataIndex[2]   ; CLK        ; CLK      ; None                        ; None                      ; 1.526 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[0]       ; sender:SENDER|state.STOP         ; CLK        ; CLK      ; None                        ; None                      ; 1.525 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[2]       ; sender:SENDER|state.STOP         ; CLK        ; CLK      ; None                        ; None                      ; 1.489 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|data[6]        ; CLK        ; CLK      ; None                        ; None                      ; 1.485 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.PARITY       ; sender:SENDER|state.SEND         ; CLK        ; CLK      ; None                        ; None                      ; 1.463 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|data[2]        ; CLK        ; CLK      ; None                        ; None                      ; 1.452 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|data[6]        ; CLK        ; CLK      ; None                        ; None                      ; 1.397 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.SEND         ; sender:SENDER|state.SEND         ; CLK        ; CLK      ; None                        ; None                      ; 1.389 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|data[2]        ; CLK        ; CLK      ; None                        ; None                      ; 1.381 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|data[6]        ; CLK        ; CLK      ; None                        ; None                      ; 1.379 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|data[4]        ; CLK        ; CLK      ; None                        ; None                      ; 1.318 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|data[0]        ; CLK        ; CLK      ; None                        ; None                      ; 1.317 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|data[5]        ; CLK        ; CLK      ; None                        ; None                      ; 1.316 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|data[4]        ; CLK        ; CLK      ; None                        ; None                      ; 1.318 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|data[5]        ; CLK        ; CLK      ; None                        ; None                      ; 1.317 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|data[6]        ; CLK        ; CLK      ; None                        ; None                      ; 1.313 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|data[0]        ; CLK        ; CLK      ; None                        ; None                      ; 1.311 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|data[3]        ; CLK        ; CLK      ; None                        ; None                      ; 1.304 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|data[3]        ; CLK        ; CLK      ; None                        ; None                      ; 1.309 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|data[1]        ; CLK        ; CLK      ; None                        ; None                      ; 1.308 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|data[6]        ; CLK        ; CLK      ; None                        ; None                      ; 1.286 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.SEND         ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 1.275 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|data[1]        ; CLK        ; CLK      ; None                        ; None                      ; 1.276 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|parityReceived ; CLK        ; CLK      ; None                        ; None                      ; 1.277 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[1]       ; sender:SENDER|state.STOP         ; CLK        ; CLK      ; None                        ; None                      ; 1.268 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|data[2]        ; CLK        ; CLK      ; None                        ; None                      ; 1.256 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.PARITY   ; receiver:RECEIVER|received       ; CLK        ; CLK      ; None                        ; None                      ; 1.219 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|data[5]            ; CLK        ; CLK      ; None                        ; None                      ; 1.211 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|data[6]            ; CLK        ; CLK      ; None                        ; None                      ; 1.211 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|data[4]            ; CLK        ; CLK      ; None                        ; None                      ; 1.211 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|data[2]            ; CLK        ; CLK      ; None                        ; None                      ; 1.211 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|data[3]            ; CLK        ; CLK      ; None                        ; None                      ; 1.211 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|data[1]            ; CLK        ; CLK      ; None                        ; None                      ; 1.211 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|data[0]            ; CLK        ; CLK      ; None                        ; None                      ; 1.211 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.PARITY       ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 1.122 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|data[6]        ; CLK        ; CLK      ; None                        ; None                      ; 1.073 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.STOP         ; sender:SENDER|sent               ; CLK        ; CLK      ; None                        ; None                      ; 1.043 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|state.PARITY   ; CLK        ; CLK      ; None                        ; None                      ; 1.042 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|signalOut          ; receiver:RECEIVER|received       ; CLK        ; CLK      ; None                        ; None                      ; 1.038 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|state.PARITY   ; CLK        ; CLK      ; None                        ; None                      ; 1.031 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.STOP         ; sender:SENDER|state.IDLE         ; CLK        ; CLK      ; None                        ; None                      ; 1.002 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|prevStart          ; sender:SENDER|state.IDLE         ; CLK        ; CLK      ; None                        ; None                      ; 0.991 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|dataIndex[2]   ; CLK        ; CLK      ; None                        ; None                      ; 0.914 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|state.STOP     ; CLK        ; CLK      ; None                        ; None                      ; 0.904 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.START        ; sender:SENDER|state.PARITY       ; CLK        ; CLK      ; None                        ; None                      ; 0.849 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[1]       ; sender:SENDER|dataIndex[2]       ; CLK        ; CLK      ; None                        ; None                      ; 0.832 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|dataIndex[1]   ; CLK        ; CLK      ; None                        ; None                      ; 0.830 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|dataIndex[2]   ; CLK        ; CLK      ; None                        ; None                      ; 0.830 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|state.STOP     ; CLK        ; CLK      ; None                        ; None                      ; 0.816 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|dataIndex[2]   ; CLK        ; CLK      ; None                        ; None                      ; 0.812 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.START        ; sender:SENDER|signalOut          ; CLK        ; CLK      ; None                        ; None                      ; 0.809 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|dataIndex[1]   ; CLK        ; CLK      ; None                        ; None                      ; 0.802 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|state.STOP     ; CLK        ; CLK      ; None                        ; None                      ; 0.798 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[0]       ; sender:SENDER|dataIndex[1]       ; CLK        ; CLK      ; None                        ; None                      ; 0.793 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[0]       ; sender:SENDER|dataIndex[2]       ; CLK        ; CLK      ; None                        ; None                      ; 0.792 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|dataIndex[0]   ; CLK        ; CLK      ; None                        ; None                      ; 0.735 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.RECEIVE  ; receiver:RECEIVER|state.STOP     ; CLK        ; CLK      ; None                        ; None                      ; 0.705 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.SEND         ; sender:SENDER|state.STOP         ; CLK        ; CLK      ; None                        ; None                      ; 0.705 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.PARITY   ; receiver:RECEIVER|parityReceived ; CLK        ; CLK      ; None                        ; None                      ; 0.554 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[1]   ; receiver:RECEIVER|dataIndex[1]   ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[0]   ; receiver:RECEIVER|dataIndex[0]   ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|state.IDLE     ; receiver:RECEIVER|state.IDLE     ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|dataIndex[2]   ; receiver:RECEIVER|dataIndex[2]   ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|state.IDLE         ; sender:SENDER|state.IDLE         ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[2]       ; sender:SENDER|dataIndex[2]       ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[1]       ; sender:SENDER|dataIndex[1]       ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|dataIndex[0]       ; sender:SENDER|dataIndex[0]       ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; sender:SENDER|sent               ; sender:SENDER|sent               ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|received       ; receiver:RECEIVER|received       ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|data[0]        ; receiver:RECEIVER|data[0]        ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|data[1]        ; receiver:RECEIVER|data[1]        ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|data[2]        ; receiver:RECEIVER|data[2]        ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|data[3]        ; receiver:RECEIVER|data[3]        ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|data[4]        ; receiver:RECEIVER|data[4]        ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|data[5]        ; receiver:RECEIVER|data[5]        ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|data[6]        ; receiver:RECEIVER|data[6]        ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; receiver:RECEIVER|parityReceived ; receiver:RECEIVER|parityReceived ; CLK        ; CLK      ; None                        ; None                      ; 0.407 ns                ;
++-------+------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; tsu                                                                                             ;
++-------+--------------+------------+---------------+----------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From          ; To                               ; To Clock ;
++-------+--------------+------------+---------------+----------------------------------+----------+
+; N/A   ; None         ; 5.246 ns   ; dataToSend[0] ; sender:SENDER|data[0]            ; CLK      ;
+; N/A   ; None         ; 3.619 ns   ; dataToSend[5] ; sender:SENDER|data[5]            ; CLK      ;
+; N/A   ; None         ; 3.597 ns   ; dataToSend[3] ; sender:SENDER|data[3]            ; CLK      ;
+; N/A   ; None         ; 3.582 ns   ; dataToSend[6] ; sender:SENDER|data[6]            ; CLK      ;
+; N/A   ; None         ; 3.540 ns   ; dataToSend[4] ; sender:SENDER|data[4]            ; CLK      ;
+; N/A   ; None         ; 3.323 ns   ; dataToSend[1] ; sender:SENDER|data[1]            ; CLK      ;
+; N/A   ; None         ; 1.909 ns   ; resetNot      ; sender:SENDER|data[5]            ; CLK      ;
+; N/A   ; None         ; 1.909 ns   ; resetNot      ; sender:SENDER|data[6]            ; CLK      ;
+; N/A   ; None         ; 1.909 ns   ; resetNot      ; sender:SENDER|data[4]            ; CLK      ;
+; N/A   ; None         ; 1.909 ns   ; resetNot      ; sender:SENDER|data[2]            ; CLK      ;
+; N/A   ; None         ; 1.909 ns   ; resetNot      ; sender:SENDER|data[3]            ; CLK      ;
+; N/A   ; None         ; 1.909 ns   ; resetNot      ; sender:SENDER|data[1]            ; CLK      ;
+; N/A   ; None         ; 1.909 ns   ; resetNot      ; sender:SENDER|data[0]            ; CLK      ;
+; N/A   ; None         ; 1.128 ns   ; send          ; sender:SENDER|dataIndex[2]       ; CLK      ;
+; N/A   ; None         ; 1.128 ns   ; send          ; sender:SENDER|dataIndex[1]       ; CLK      ;
+; N/A   ; None         ; 1.128 ns   ; send          ; sender:SENDER|dataIndex[0]       ; CLK      ;
+; N/A   ; None         ; 1.055 ns   ; resetNot      ; receiver:RECEIVER|parityReceived ; CLK      ;
+; N/A   ; None         ; 0.754 ns   ; send          ; sender:SENDER|data[5]            ; CLK      ;
+; N/A   ; None         ; 0.754 ns   ; send          ; sender:SENDER|data[6]            ; CLK      ;
+; N/A   ; None         ; 0.754 ns   ; send          ; sender:SENDER|data[4]            ; CLK      ;
+; N/A   ; None         ; 0.754 ns   ; send          ; sender:SENDER|data[2]            ; CLK      ;
+; N/A   ; None         ; 0.754 ns   ; send          ; sender:SENDER|data[3]            ; CLK      ;
+; N/A   ; None         ; 0.754 ns   ; send          ; sender:SENDER|data[1]            ; CLK      ;
+; N/A   ; None         ; 0.754 ns   ; send          ; sender:SENDER|data[0]            ; CLK      ;
+; N/A   ; None         ; 0.512 ns   ; send          ; sender:SENDER|sent               ; CLK      ;
+; N/A   ; None         ; 0.451 ns   ; send          ; sender:SENDER|state.START        ; CLK      ;
+; N/A   ; None         ; -0.103 ns  ; send          ; sender:SENDER|state.IDLE         ; CLK      ;
+; N/A   ; None         ; -0.216 ns  ; send          ; sender:SENDER|prevStart          ; CLK      ;
+; N/A   ; None         ; -0.237 ns  ; dataToSend[2] ; sender:SENDER|data[2]            ; CLK      ;
++-------+--------------+------------+---------------+----------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; tco                                                                                                 ;
++-------+--------------+------------+----------------------------------+-----------------+------------+
+; Slack ; Required tco ; Actual tco ; From                             ; To              ; From Clock ;
++-------+--------------+------------+----------------------------------+-----------------+------------+
+; N/A   ; None         ; 9.133 ns   ; receiver:RECEIVER|data[5]        ; parityCheck     ; CLK        ;
+; N/A   ; None         ; 9.109 ns   ; receiver:RECEIVER|data[6]        ; parityCheck     ; CLK        ;
+; N/A   ; None         ; 8.995 ns   ; receiver:RECEIVER|data[1]        ; parityCheck     ; CLK        ;
+; N/A   ; None         ; 8.955 ns   ; receiver:RECEIVER|parityReceived ; parityCheck     ; CLK        ;
+; N/A   ; None         ; 8.915 ns   ; sender:SENDER|sent               ; sent            ; CLK        ;
+; N/A   ; None         ; 8.869 ns   ; receiver:RECEIVER|data[0]        ; parityCheck     ; CLK        ;
+; N/A   ; None         ; 8.853 ns   ; receiver:RECEIVER|data[3]        ; dataReceived[3] ; CLK        ;
+; N/A   ; None         ; 8.827 ns   ; receiver:RECEIVER|data[4]        ; parityCheck     ; CLK        ;
+; N/A   ; None         ; 8.821 ns   ; receiver:RECEIVER|data[0]        ; dataReceived[0] ; CLK        ;
+; N/A   ; None         ; 8.467 ns   ; receiver:RECEIVER|data[2]        ; parityCheck     ; CLK        ;
+; N/A   ; None         ; 8.158 ns   ; receiver:RECEIVER|data[3]        ; parityCheck     ; CLK        ;
+; N/A   ; None         ; 7.541 ns   ; receiver:RECEIVER|data[5]        ; dataReceived[5] ; CLK        ;
+; N/A   ; None         ; 6.959 ns   ; receiver:RECEIVER|received       ; received        ; CLK        ;
+; N/A   ; None         ; 6.804 ns   ; receiver:RECEIVER|data[2]        ; dataReceived[2] ; CLK        ;
+; N/A   ; None         ; 6.600 ns   ; receiver:RECEIVER|data[6]        ; dataReceived[6] ; CLK        ;
+; N/A   ; None         ; 6.415 ns   ; sender:SENDER|signalOut          ; signalOut       ; CLK        ;
+; N/A   ; None         ; 6.392 ns   ; receiver:RECEIVER|data[1]        ; dataReceived[1] ; CLK        ;
+; N/A   ; None         ; 6.389 ns   ; receiver:RECEIVER|data[4]        ; dataReceived[4] ; CLK        ;
++-------+--------------+------------+----------------------------------+-----------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; th                                                                                                    ;
++---------------+-------------+-----------+---------------+----------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From          ; To                               ; To Clock ;
++---------------+-------------+-----------+---------------+----------------------------------+----------+
+; N/A           ; None        ; 0.467 ns  ; dataToSend[2] ; sender:SENDER|data[2]            ; CLK      ;
+; N/A           ; None        ; 0.446 ns  ; send          ; sender:SENDER|prevStart          ; CLK      ;
+; N/A           ; None        ; 0.333 ns  ; send          ; sender:SENDER|state.IDLE         ; CLK      ;
+; N/A           ; None        ; -0.221 ns ; send          ; sender:SENDER|state.START        ; CLK      ;
+; N/A           ; None        ; -0.282 ns ; send          ; sender:SENDER|sent               ; CLK      ;
+; N/A           ; None        ; -0.524 ns ; send          ; sender:SENDER|data[5]            ; CLK      ;
+; N/A           ; None        ; -0.524 ns ; send          ; sender:SENDER|data[6]            ; CLK      ;
+; N/A           ; None        ; -0.524 ns ; send          ; sender:SENDER|data[4]            ; CLK      ;
+; N/A           ; None        ; -0.524 ns ; send          ; sender:SENDER|data[2]            ; CLK      ;
+; N/A           ; None        ; -0.524 ns ; send          ; sender:SENDER|data[3]            ; CLK      ;
+; N/A           ; None        ; -0.524 ns ; send          ; sender:SENDER|data[1]            ; CLK      ;
+; N/A           ; None        ; -0.524 ns ; send          ; sender:SENDER|data[0]            ; CLK      ;
+; N/A           ; None        ; -0.825 ns ; resetNot      ; receiver:RECEIVER|parityReceived ; CLK      ;
+; N/A           ; None        ; -0.898 ns ; send          ; sender:SENDER|dataIndex[2]       ; CLK      ;
+; N/A           ; None        ; -0.898 ns ; send          ; sender:SENDER|dataIndex[1]       ; CLK      ;
+; N/A           ; None        ; -0.898 ns ; send          ; sender:SENDER|dataIndex[0]       ; CLK      ;
+; N/A           ; None        ; -1.679 ns ; resetNot      ; sender:SENDER|data[5]            ; CLK      ;
+; N/A           ; None        ; -1.679 ns ; resetNot      ; sender:SENDER|data[6]            ; CLK      ;
+; N/A           ; None        ; -1.679 ns ; resetNot      ; sender:SENDER|data[4]            ; CLK      ;
+; N/A           ; None        ; -1.679 ns ; resetNot      ; sender:SENDER|data[2]            ; CLK      ;
+; N/A           ; None        ; -1.679 ns ; resetNot      ; sender:SENDER|data[3]            ; CLK      ;
+; N/A           ; None        ; -1.679 ns ; resetNot      ; sender:SENDER|data[1]            ; CLK      ;
+; N/A           ; None        ; -1.679 ns ; resetNot      ; sender:SENDER|data[0]            ; CLK      ;
+; N/A           ; None        ; -3.093 ns ; dataToSend[1] ; sender:SENDER|data[1]            ; CLK      ;
+; N/A           ; None        ; -3.310 ns ; dataToSend[4] ; sender:SENDER|data[4]            ; CLK      ;
+; N/A           ; None        ; -3.352 ns ; dataToSend[6] ; sender:SENDER|data[6]            ; CLK      ;
+; N/A           ; None        ; -3.367 ns ; dataToSend[3] ; sender:SENDER|data[3]            ; CLK      ;
+; N/A           ; None        ; -3.389 ns ; dataToSend[5] ; sender:SENDER|data[5]            ; CLK      ;
+; N/A           ; None        ; -5.016 ns ; dataToSend[0] ; sender:SENDER|data[0]            ; CLK      ;
++---------------+-------------+-----------+---------------+----------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Wed May 01 11:05:56 2024
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off UART -c UART --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" has Internal fmax of 347.83 MHz between source register "sender:SENDER|data[4]" and destination register "sender:SENDER|signalOut" (period= 2.875 ns)
+    Info: + Longest register to register delay is 2.661 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X37_Y33_N29; Fanout = 2; REG Node = 'sender:SENDER|data[4]'
+        Info: 2: + IC(0.969 ns) + CELL(0.420 ns) = 1.389 ns; Loc. = LCCOMB_X37_Y33_N30; Fanout = 1; COMB Node = 'sender:SENDER|Selector9~8'
+        Info: 3: + IC(0.246 ns) + CELL(0.150 ns) = 1.785 ns; Loc. = LCCOMB_X37_Y33_N26; Fanout = 1; COMB Node = 'sender:SENDER|Selector9~9'
+        Info: 4: + IC(0.248 ns) + CELL(0.150 ns) = 2.183 ns; Loc. = LCCOMB_X37_Y33_N10; Fanout = 1; COMB Node = 'sender:SENDER|Selector9~10'
+        Info: 5: + IC(0.245 ns) + CELL(0.149 ns) = 2.577 ns; Loc. = LCCOMB_X37_Y33_N18; Fanout = 1; COMB Node = 'sender:SENDER|Selector9~11'
+        Info: 6: + IC(0.000 ns) + CELL(0.084 ns) = 2.661 ns; Loc. = LCFF_X37_Y33_N19; Fanout = 14; REG Node = 'sender:SENDER|signalOut'
+        Info: Total cell delay = 0.953 ns ( 35.81 % )
+        Info: Total interconnect delay = 1.708 ns ( 64.19 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 2.673 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 34; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(1.019 ns) + CELL(0.537 ns) = 2.673 ns; Loc. = LCFF_X37_Y33_N19; Fanout = 14; REG Node = 'sender:SENDER|signalOut'
+            Info: Total cell delay = 1.536 ns ( 57.46 % )
+            Info: Total interconnect delay = 1.137 ns ( 42.54 % )
+        Info: - Longest clock path from clock "CLK" to source register is 2.673 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 34; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(1.019 ns) + CELL(0.537 ns) = 2.673 ns; Loc. = LCFF_X37_Y33_N29; Fanout = 2; REG Node = 'sender:SENDER|data[4]'
+            Info: Total cell delay = 1.536 ns ( 57.46 % )
+            Info: Total interconnect delay = 1.137 ns ( 42.54 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "sender:SENDER|data[0]" (data pin = "dataToSend[0]", clock pin = "CLK") is 5.246 ns
+    Info: + Longest pin to register delay is 7.955 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.850 ns) = 0.850 ns; Loc. = PIN_AE13; Fanout = 1; PIN Node = 'dataToSend[0]'
+        Info: 2: + IC(6.739 ns) + CELL(0.366 ns) = 7.955 ns; Loc. = LCFF_X37_Y33_N3; Fanout = 2; REG Node = 'sender:SENDER|data[0]'
+        Info: Total cell delay = 1.216 ns ( 15.29 % )
+        Info: Total interconnect delay = 6.739 ns ( 84.71 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 2.673 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 34; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(1.019 ns) + CELL(0.537 ns) = 2.673 ns; Loc. = LCFF_X37_Y33_N3; Fanout = 2; REG Node = 'sender:SENDER|data[0]'
+        Info: Total cell delay = 1.536 ns ( 57.46 % )
+        Info: Total interconnect delay = 1.137 ns ( 42.54 % )
+Info: tco from clock "CLK" to destination pin "parityCheck" through register "receiver:RECEIVER|data[5]" is 9.133 ns
+    Info: + Longest clock path from clock "CLK" to source register is 2.679 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 34; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(1.025 ns) + CELL(0.537 ns) = 2.679 ns; Loc. = LCFF_X41_Y33_N11; Fanout = 3; REG Node = 'receiver:RECEIVER|data[5]'
+        Info: Total cell delay = 1.536 ns ( 57.33 % )
+        Info: Total interconnect delay = 1.143 ns ( 42.67 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 6.204 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X41_Y33_N11; Fanout = 3; REG Node = 'receiver:RECEIVER|data[5]'
+        Info: 2: + IC(0.329 ns) + CELL(0.438 ns) = 0.767 ns; Loc. = LCCOMB_X41_Y33_N2; Fanout = 1; COMB Node = 'receiver:RECEIVER|parityChecked~2'
+        Info: 3: + IC(0.249 ns) + CELL(0.419 ns) = 1.435 ns; Loc. = LCCOMB_X41_Y33_N12; Fanout = 1; COMB Node = 'receiver:RECEIVER|parityChecked~0'
+        Info: 4: + IC(2.097 ns) + CELL(2.672 ns) = 6.204 ns; Loc. = PIN_C24; Fanout = 0; PIN Node = 'parityCheck'
+        Info: Total cell delay = 3.529 ns ( 56.88 % )
+        Info: Total interconnect delay = 2.675 ns ( 43.12 % )
+Info: th for register "sender:SENDER|data[2]" (data pin = "dataToSend[2]", clock pin = "CLK") is 0.467 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 2.673 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 34; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(1.019 ns) + CELL(0.537 ns) = 2.673 ns; Loc. = LCFF_X37_Y33_N9; Fanout = 2; REG Node = 'sender:SENDER|data[2]'
+        Info: Total cell delay = 1.536 ns ( 57.46 % )
+        Info: Total interconnect delay = 1.137 ns ( 42.54 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 2.472 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 1; PIN Node = 'dataToSend[2]'
+        Info: 2: + IC(1.127 ns) + CELL(0.366 ns) = 2.472 ns; Loc. = LCFF_X37_Y33_N9; Fanout = 2; REG Node = 'sender:SENDER|data[2]'
+        Info: Total cell delay = 1.345 ns ( 54.41 % )
+        Info: Total interconnect delay = 1.127 ns ( 45.59 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 355 megabytes
+    Info: Processing ended: Wed May 01 11:05:56 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,15 @@
+
+State Machine - |uart|receiver:RECEIVER|state
+Name state.STOP state.RECEIVE state.PARITY state.IDLE 
+state.IDLE 0 0 0 0 
+state.PARITY 0 0 1 1 
+state.RECEIVE 0 1 0 1 
+state.STOP 1 0 0 1 
+
+State Machine - |uart|sender:SENDER|state
+Name state.SEND state.PARITY state.START state.IDLE state.STOP 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 1 1 0 
+state.PARITY 0 1 0 1 0 
+state.SEND 1 0 0 1 0 
+state.STOP 0 0 0 1 1 

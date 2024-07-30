@@ -1,0 +1,255 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+1BitComparator
+# storage
+db|11divide.(3).cnf
+db|11divide.(3).cnf
+# case_insensitive
+# source_file
+1BitComparator.bdf
+a4a059819e6c809d21a4c139f76416
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+4BitComparator:inst1|2BitComparator:inst1|1BitComparator:inst1
+4BitComparator:inst1|2BitComparator:inst1|1BitComparator:inst8
+4BitComparator:inst1|2BitComparator:inst8|1BitComparator:inst1
+4BitComparator:inst1|2BitComparator:inst8|1BitComparator:inst8
+4BitComparator:inst2|2BitComparator:inst1|1BitComparator:inst1
+4BitComparator:inst2|2BitComparator:inst1|1BitComparator:inst8
+4BitComparator:inst2|2BitComparator:inst8|1BitComparator:inst1
+4BitComparator:inst2|2BitComparator:inst8|1BitComparator:inst8
+4BitComparator:inst3|2BitComparator:inst1|1BitComparator:inst1
+4BitComparator:inst3|2BitComparator:inst1|1BitComparator:inst8
+4BitComparator:inst3|2BitComparator:inst8|1BitComparator:inst1
+4BitComparator:inst3|2BitComparator:inst8|1BitComparator:inst8
+}
+# macro_sequence
+
+# end
+# entity
+FullAdder
+# storage
+db|11divide.(5).cnf
+db|11divide.(5).cnf
+# case_insensitive
+# source_file
+FullAdder.bdf
+501b8c4d73b1eabbffda712172189b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+4BitFullAdder:inst|FullAdder:inst3
+4BitFullAdder:inst|FullAdder:inst2
+4BitFullAdder:inst|FullAdder:inst1
+4BitFullAdder:inst|FullAdder:inst
+4BitFullAdder:inst6|FullAdder:inst3
+4BitFullAdder:inst6|FullAdder:inst2
+4BitFullAdder:inst6|FullAdder:inst1
+4BitFullAdder:inst6|FullAdder:inst
+4BitFullAdder:inst86|FullAdder:inst3
+4BitFullAdder:inst86|FullAdder:inst2
+4BitFullAdder:inst86|FullAdder:inst1
+4BitFullAdder:inst86|FullAdder:inst
+4BitFullAdder:inst4|FullAdder:inst3
+4BitFullAdder:inst4|FullAdder:inst2
+4BitFullAdder:inst4|FullAdder:inst1
+4BitFullAdder:inst4|FullAdder:inst
+4BitFullAdder:inst7|FullAdder:inst3
+4BitFullAdder:inst7|FullAdder:inst2
+4BitFullAdder:inst7|FullAdder:inst1
+4BitFullAdder:inst7|FullAdder:inst
+4BitFullAdder:inst87|FullAdder:inst3
+4BitFullAdder:inst87|FullAdder:inst2
+4BitFullAdder:inst87|FullAdder:inst1
+4BitFullAdder:inst87|FullAdder:inst
+}
+# macro_sequence
+
+# end
+# entity
+HalfAdder
+# storage
+db|11divide.(6).cnf
+db|11divide.(6).cnf
+# case_insensitive
+# source_file
+HalfAdder.bdf
+d4161b5d8fcb783d0f75f98bc324d15
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+4BitFullAdder:inst|FullAdder:inst3|HalfAdder:inst1
+4BitFullAdder:inst|FullAdder:inst3|HalfAdder:inst
+4BitFullAdder:inst|FullAdder:inst2|HalfAdder:inst1
+4BitFullAdder:inst|FullAdder:inst2|HalfAdder:inst
+4BitFullAdder:inst|FullAdder:inst1|HalfAdder:inst1
+4BitFullAdder:inst|FullAdder:inst1|HalfAdder:inst
+4BitFullAdder:inst|FullAdder:inst|HalfAdder:inst1
+4BitFullAdder:inst|FullAdder:inst|HalfAdder:inst
+4BitFullAdder:inst6|FullAdder:inst3|HalfAdder:inst1
+4BitFullAdder:inst6|FullAdder:inst3|HalfAdder:inst
+4BitFullAdder:inst6|FullAdder:inst2|HalfAdder:inst1
+4BitFullAdder:inst6|FullAdder:inst2|HalfAdder:inst
+4BitFullAdder:inst6|FullAdder:inst1|HalfAdder:inst1
+4BitFullAdder:inst6|FullAdder:inst1|HalfAdder:inst
+4BitFullAdder:inst6|FullAdder:inst|HalfAdder:inst1
+4BitFullAdder:inst6|FullAdder:inst|HalfAdder:inst
+4BitFullAdder:inst86|FullAdder:inst3|HalfAdder:inst1
+4BitFullAdder:inst86|FullAdder:inst3|HalfAdder:inst
+4BitFullAdder:inst86|FullAdder:inst2|HalfAdder:inst1
+4BitFullAdder:inst86|FullAdder:inst2|HalfAdder:inst
+4BitFullAdder:inst86|FullAdder:inst1|HalfAdder:inst1
+4BitFullAdder:inst86|FullAdder:inst1|HalfAdder:inst
+4BitFullAdder:inst86|FullAdder:inst|HalfAdder:inst1
+4BitFullAdder:inst86|FullAdder:inst|HalfAdder:inst
+4BitFullAdder:inst4|FullAdder:inst3|HalfAdder:inst1
+4BitFullAdder:inst4|FullAdder:inst3|HalfAdder:inst
+4BitFullAdder:inst4|FullAdder:inst2|HalfAdder:inst1
+4BitFullAdder:inst4|FullAdder:inst2|HalfAdder:inst
+4BitFullAdder:inst4|FullAdder:inst1|HalfAdder:inst1
+4BitFullAdder:inst4|FullAdder:inst1|HalfAdder:inst
+4BitFullAdder:inst4|FullAdder:inst|HalfAdder:inst1
+4BitFullAdder:inst4|FullAdder:inst|HalfAdder:inst
+4BitFullAdder:inst7|FullAdder:inst3|HalfAdder:inst1
+4BitFullAdder:inst7|FullAdder:inst3|HalfAdder:inst
+4BitFullAdder:inst7|FullAdder:inst2|HalfAdder:inst1
+4BitFullAdder:inst7|FullAdder:inst2|HalfAdder:inst
+4BitFullAdder:inst7|FullAdder:inst1|HalfAdder:inst1
+4BitFullAdder:inst7|FullAdder:inst1|HalfAdder:inst
+4BitFullAdder:inst7|FullAdder:inst|HalfAdder:inst1
+4BitFullAdder:inst7|FullAdder:inst|HalfAdder:inst
+4BitFullAdder:inst87|FullAdder:inst3|HalfAdder:inst1
+4BitFullAdder:inst87|FullAdder:inst3|HalfAdder:inst
+4BitFullAdder:inst87|FullAdder:inst2|HalfAdder:inst1
+4BitFullAdder:inst87|FullAdder:inst2|HalfAdder:inst
+4BitFullAdder:inst87|FullAdder:inst1|HalfAdder:inst1
+4BitFullAdder:inst87|FullAdder:inst1|HalfAdder:inst
+4BitFullAdder:inst87|FullAdder:inst|HalfAdder:inst1
+4BitFullAdder:inst87|FullAdder:inst|HalfAdder:inst
+}
+# macro_sequence
+
+# end
+# entity
+11divide
+# storage
+db|11divide.(0).cnf
+db|11divide.(0).cnf
+# case_insensitive
+# source_file
+11divide.bdf
+fd55e17f0bedea510a89958e7b242
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+4BitComparator
+# storage
+db|11divide.(1).cnf
+db|11divide.(1).cnf
+# case_insensitive
+# source_file
+4BitComparator.bdf
+ecfff6a6418be9ae9d421350af95ec6e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+4BitComparator:inst1
+4BitComparator:inst2
+4BitComparator:inst3
+}
+# macro_sequence
+
+# end
+# entity
+2BitComparator
+# storage
+db|11divide.(2).cnf
+db|11divide.(2).cnf
+# case_insensitive
+# source_file
+2BitComparator.bdf
+6dffa953804d48e95d705396f88b5d9a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+4BitComparator:inst1|2BitComparator:inst1
+4BitComparator:inst1|2BitComparator:inst8
+4BitComparator:inst2|2BitComparator:inst1
+4BitComparator:inst2|2BitComparator:inst8
+4BitComparator:inst3|2BitComparator:inst1
+4BitComparator:inst3|2BitComparator:inst8
+}
+# macro_sequence
+
+# end
+# entity
+4BitFullAdder
+# storage
+db|11divide.(4).cnf
+db|11divide.(4).cnf
+# case_insensitive
+# source_file
+4BitFullAdder.bdf
+39acb46fef4263b7d4fdb8f86b5729
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+4BitFullAdder:inst
+4BitFullAdder:inst6
+4BitFullAdder:inst86
+4BitFullAdder:inst4
+4BitFullAdder:inst7
+4BitFullAdder:inst87
+}
+# macro_sequence
+
+# end
+# complete
+

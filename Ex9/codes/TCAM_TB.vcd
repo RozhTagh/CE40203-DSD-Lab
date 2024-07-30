@@ -1,0 +1,162 @@
+$date
+	Wed May 15 02:10:37 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TCAM_TB $end
+$var wire 1 ! match_found $end
+$var wire 4 " match_address [3:0] $end
+$var parameter 32 # address_line $end
+$var parameter 32 $ data_size $end
+$var reg 1 % clk $end
+$var reg 16 & input_data [15:0] $end
+$scope module tcam1 $end
+$var wire 1 % clk $end
+$var wire 16 ' input_data [15:0] $end
+$var parameter 32 ( address_line $end
+$var parameter 32 ) data_size $end
+$var reg 16 * data [15:0] $end
+$var reg 16 + mask [15:0] $end
+$var reg 4 , match_address [3:0] $end
+$var reg 1 ! match_found $end
+$var integer 32 - i [31:0] $end
+$var integer 32 . j [31:0] $end
+$var integer 32 / match_count [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000 )
+b100 (
+b10000 $
+b100 #
+$end
+#0
+$dumpvars
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+b1111111111111111 '
+b1111111111111111 &
+0%
+bx "
+x!
+$end
+#5
+b10000 .
+b1000111110001111 +
+b1111111111111111 *
+b10000 /
+b10000 -
+1!
+b110 "
+b110 ,
+1%
+#10
+0%
+b1001001001001001 &
+b1001001001001001 '
+#15
+b10000 .
+b1111111111111111 +
+b1001001001001001 *
+b10000 /
+b10000 -
+1!
+b1 "
+b1 ,
+1%
+#20
+0%
+b101101001011010 &
+b101101001011010 '
+#25
+b1000111110001111 +
+b10000 .
+b11010011010011 *
+b1010 /
+b10000 -
+0!
+b0 "
+b0 ,
+1%
+#30
+0%
+b1111110011001100 &
+b1111110011001100 '
+#35
+1!
+b10 "
+b10 ,
+b10000 .
+b1100111111001111 +
+b1100110011001100 *
+b10000 /
+b10000 -
+1%
+#40
+0%
+b111000001110000 &
+b111000001110000 '
+#45
+b10000 .
+b1000111110001111 +
+b0 *
+b10000 /
+b10000 -
+1!
+b111 "
+b111 ,
+1%
+#50
+0%
+b1001011010010110 &
+b1001011010010110 '
+#55
+b10000 .
+b11110000111100 +
+b101010101010101 *
+b10000 /
+b10000 -
+1!
+b101 "
+b101 ,
+1%
+#60
+0%
+b1010101010101010 &
+b1010101010101010 '
+#65
+b10000 .
+b1111111111111111 +
+b1010101010101010 *
+b10000 /
+b10000 -
+1!
+b0 "
+b0 ,
+1%
+#70
+0%
+b1111001110011110 &
+b1111001110011110 '
+#75
+b11 "
+b11 ,
+b1100111111001111 +
+b1110001110001110 *
+b10000 .
+b10000 /
+b10000 -
+1!
+1%
+#80
+0%

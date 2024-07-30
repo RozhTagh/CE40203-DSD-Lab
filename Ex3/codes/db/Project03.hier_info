@@ -1,0 +1,25 @@
+|SerialComp
+clk => greater_out$latch.LATCH_ENABLE
+clk => lower_out$latch.LATCH_ENABLE
+clk => equal_out$latch.LATCH_ENABLE
+clk => tmp_not_lower_out~0.IN0
+clk => tmp_lower_out~0.IN0
+clk => tmp_not_equal_out~0.IN0
+clk => tmp_equal_out~0.IN0
+clk => tmp_not_greater_out~0.IN0
+clk => tmp_greater_out~0.IN0
+reset => equal_in.IN0
+reset => lower_in.IN0
+reset => equal_in~2.IN0
+reset => greater_in.IN0
+a => LessThan1.IN1
+a => LessThan0.IN1
+a => equal_in~0.IN0
+b => LessThan1.IN2
+b => LessThan0.IN2
+b => equal_in~0.IN1
+greater_out <= greater_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+equal_out <= equal_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+lower_out <= lower_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
